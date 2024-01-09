@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(229, 24%, 87%);
+}
+.form-container{
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: hsl(0, 0%, 100%);
+    /* box-shadow: 0 0 0 black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sidebar{
+    min-width: 20vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:10px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info:hover .circle{
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+}
+.info:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+.circle{
+    padding: .6rem .8rem;
+    text-align: center;
+    border: 2px solid hsl(206, 94%, 87%);
+    border-radius: 50%;
+    color: white;
+}
+.details{
+    padding: .8rem;
+}
+.details p{
+    font-size: 1rem;
+    color: hsl(231, 11%, 63%);
+}
+.details b{
+    font-size: 1rem;
+    color: white;
+}
+
+
+.steps{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.step h1{
+    color: hsl(213, 96%, 18%);
+    margin-top: .8rem;
+}
+.step input{
+    height: 5vh;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px;
+    color: hsl(213, 96%, 18%);
+}
+.provide{
+    color: hsl(231, 11%, 63%);
+    margin-bottom: 2rem;
+}
+form label{
+    color: hsl(213, 96%, 18%);
+    padding-top: 1rem;
+}
+form input:focus{
+    border: 2px solid hsl(243, 100%, 62%);
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name p{
+    font-size: .9rem;
+    color: hsl(354, 84%, 57%);
+    padding-top: 1rem;
+}
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.email p{
+    font-size: .9rem;
+    color: hsl(354, 84%, 57%);
+    padding-top: 1rem;
+}
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.number p{
+    font-size: .9rem;
+    color: hsl(354, 84%, 57%);
+    padding-top: 1rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn button{
+    margin-top: 2rem;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 10vmax;
+    height: 6vh;
+}
+.btn button:hover{
+    transition: .3s ease-in-out;
+    transform: scale(1.1);
+    background-color: hsl(243, 100%, 62%);
+}
+
+.step{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sections{
+    display: flex;
+}
+.switch{
+    margin-top: 1rem;
+    width: 100%;
+    height: 7vh;
+    background-color: hsl(217, 100%, 97%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.switch p{
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
+
+.switch input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+.switch label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 30px;
+    background: hsl(213, 96%, 18%);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.switch label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+  
+.switch input:checked + label {
+    background: hsl(228, 100%, 84%);
+}
+  
+.switch input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+  
+.switch label:active:after {
+    width: 50px;
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vh;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.btns{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btns button{
+    margin-top: 2rem;
+    background-color: hsl(243, 100%, 62%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 10vmax;
+    height: 6vh;
+}
+.sections button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    margin-right: 2rem;
+    border: 1px solid hsl(231, 11%, 63%);
+}
+.sections button:hover{
+    transform: scale(1.1);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+.sections button:focus{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}
+.btns button:hover{
+    transition: .3s ease-in-out;
+    transform: scale(1.1);
+    background-color: hsl(243, 100%, 62%);
+}
+.per-month{
+    max-width: 350px;
+    max-height: 70px;
+    height: 100%;
+    margin-bottom: .8rem;
+    border: 1px solid hsl(243, 100%, 62%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 10px;
+}
+
+.per-month span{
+    margin-top: 1rem;
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+.checkbox input{
+    margin-right: 1rem;
+}
+.service-title{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+.price-per-month{
+    color:  hsl(243, 100%, 62%);
+}
+.step3 .btns{
+    margin-top: -.3rem;
+}
+.btns .go-back{
+    color: hsl(231, 11%, 63%);
+    background: transparent;
+}
+.btns .go-back:hover{
+    transform: scale(1.1);
+    background: transparent;
+}
+
+.monthly-yearly{
+    padding: 1rem;
+    background:hsl(217, 100%, 97%);
+}
+.monthly-yearly span{
+    font-size: .8rem;
+}
+.arcade-monthly-yealy{
+    color: hsl(231, 11%, 63%);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.change{
+    display: flex;
+    flex-direction: column;
+}
+.online{
+    color: hsl(231, 11%, 63%);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.larger-storage{
+    color: hsl(231, 11%, 63%);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total span{
+    color: hsl(243, 100%, 62%);
+    font-size: 1.1rem;
+}
+.total .total-text{
+    color: hsl(231, 11%, 63%);
+    font-size: .8rem;
+}
+
+.thankyou{
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+
+
+
+/* --------------------------hidden classes----------------------------- */
+
+.required-hidden-name{
+    display: none;
+}
+.required-hidden-email{
+    display: none;
+}
+.required-hidden-number{
+    display: none;
+}
+.step1{
+    display: block;
+}
+.step2{
+    display: none;
+}
+.step3{
+    display: none;
+}
+.step4{
+    display: none;
+}
+.step5{
+    display: none;
+}
